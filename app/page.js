@@ -1,10 +1,13 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
+import {getSortedPostsData} from "../lib/posts.js";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getSortedPostsData("about.md");
+  console.log(posts);
   return (
-    <div className={styles.page}>
-      
+    <div>
+
     </div>
   );
 }
