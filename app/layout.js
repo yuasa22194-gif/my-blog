@@ -5,7 +5,7 @@ import styles from './layout.module.css'
 
 export default function DashboardLayout({children,}) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body>
         <header className={styles.header}>
           <div className={styles.home}>

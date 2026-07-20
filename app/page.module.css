@@ -140,3 +140,20 @@ a.secondary {
     --button-secondary-border: #1a1a1a;
   }
 }
+
+.postList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 24px; /* カード同士の隙間 */
+  list-style: none;
+  padding: 0;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
