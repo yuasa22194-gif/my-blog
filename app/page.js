@@ -3,6 +3,10 @@ import Link from "next/link";
 import {getSortedPostsData, getAllPostsData} from "../lib/posts.js";
 import {Thumb} from "../components/Thumb.js";
 
+export const metadata = {
+  title: "Yuki's Blog",
+  description: "初めて作ったブログサイトです。学んだ内容を投稿していきます。",
+};
 
 export default async function Home() {
   const posts = await getAllPostsData();
