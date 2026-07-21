@@ -1,11 +1,19 @@
-import { getSortedPostsData } from '@/lib/posts';
+// import { getSortedPostsData } from '@/lib/posts';
 import styles from './page.module.css';
 import Link from 'next/link';
+import getPostData from './get_post_data';
+
+export async function generateMetadata({params}) {
+  const post = await getPostData({params});
+  return {
+    title: post.title,
+    description: post.description,
+  };
+} 
+
 
 export default async function Page({params}) {
-  const Params = await params;
-  const fileName = Params.id;
-  const post = await getSortedPostsData(`${fileName}.md`);
+  const post = await getPostData({params});
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.backLink}>
